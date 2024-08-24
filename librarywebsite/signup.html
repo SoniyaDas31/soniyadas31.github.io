@@ -16,25 +16,33 @@
     <h1 class="visually-hidden">library website</h1>
     <div class="container">
         <div class="w-100 m-auto form-signin p-4" style="background-color:rgb(217, 193, 255);">
-            <form action="home.html">
+            <form action="login.html">
                 <img class="mb-4" src="images/logo.png" alt="" width="72" height="57">
                 <h2 class="h2">ICT Library</h2>
-                <h3 class="h3 mb-3 fw-normal">Please log in</h3>
+                <h3 class="h3 mb-3 fw-normal">Sign Up</h3>
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control" id="name" placeholder="Enter Your Name" pattern="^[a-zA-Z]+$">
+                    <label for="floatingInput">Name</label>
+                  </div>
                   <div class="form-floating mb-4">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
                     <label for="floatingInput">Email address</label>
                   </div>
+                  <div class="form-floating mb-4">
+                    <input type="number" class="form-control" id="mobile" placeholder="10 digit mobile number" maxlength="10">
+                    <label for="floatingInput">Mobile Number</label>
+                  </div>
                   <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <label for="floatingPassword">Create Password</label>
                   </div>
                   <div class="form-check text-start my-3">
                     <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
                     <label class="form-check-label" for="flexCheckDefault">
-                      Remember me
+                      Terms and Conditions
                     </label>
                   </div>
-                  <button class="btn btn-primary w-100 py-2" type="submit">Log in</button>
+                  <button class="btn btn-primary w-100 py-2" type="submit">Sign Up</button>
             </form>
         </div>
         
