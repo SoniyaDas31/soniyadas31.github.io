@@ -16,25 +16,37 @@
     <h1 class="visually-hidden">library website</h1>
     <div class="container">
         <div class="w-100 m-auto form-signin p-4" style="background-color:rgb(217, 193, 255);">
-            <form action="login.html">
+            <form action="" novalidate>
                 <img class="mb-4" src="images/logo.png" alt="" width="72" height="57">
                 <h2 class="h2">ICT Library</h2>
                 <h3 class="h3 mb-3 fw-normal">Sign Up</h3>
                 <div class="form-floating mb-4">
-                    <input type="text" class="form-control" id="name" placeholder="Enter Your Name" pattern="^[a-zA-Z]+$">
+                    <input type="text" class="form-control" id="name" placeholder="Enter Your Name" maxlength="52" required>
                     <label for="floatingInput">Name</label>
-                  </div>
+                    <div class="invalid-feedback" id="name-error">
+                      Error will be displayed here
+                    </div>
+                </div>
                   <div class="form-floating mb-4">
-                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
                     <label for="floatingInput">Email address</label>
+                    <div class="invalid-feedback" id="email-error">
+                      Error will be displayed here
+                    </div>
                   </div>
                   <div class="form-floating mb-4">
-                    <input type="number" class="form-control" id="mobile" placeholder="10 digit mobile number" maxlength="10">
+                    <input type="text" class="form-control" id="mobile" placeholder="10 digit mobile number" required>
                     <label for="floatingInput">Mobile Number</label>
+                    <div class="invalid-feedback" id="phone-error">
+                      Error will be displayed here
+                    </div>
                   </div>
                   <div class="form-floating">
-                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <input type="password" class="form-control" id="password" placeholder="Password" onkeypress="validatePassword(this.value)" required>
                     <label for="floatingPassword">Create Password</label>
+                    <div class="invalid-feedback" id="password-error" style="display: block;">
+                      Minimum 8 characters, at least one uppercase, and one lower case, must contain at least one number 
+                    </div>
                   </div>
                   <div class="form-check text-start my-3">
                     <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
@@ -42,11 +54,12 @@
                       Terms and Conditions
                     </label>
                   </div>
-                  <button class="btn btn-primary w-100 py-2" type="submit">Sign Up</button>
+                  <button class="btn btn-primary w-100 py-2" type="button" onclick="form_validate()">Sign Up</button>
             </form>
         </div>
         
     </div>
-    <script src="node_modules/bootstrap/dist/js/" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
